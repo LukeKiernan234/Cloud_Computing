@@ -59,6 +59,7 @@ function TodoListCard() {
                 <ItemDisplay
                     item={item}
                     key={item.id}
+                    disabled={true}
                     onItemUpdate={onItemUpdate}
                     onItemRemoval={onItemRemoval}
                 />
@@ -168,6 +169,7 @@ function ItemDisplay({ item, onItemUpdate, onItemRemoval }) {
                         size="sm"
                         variant="link"
                         onClick={removeItem}
+                        disabled={true}
                         aria-label="Remove Item"
                     >
                         <i className="fa fa-trash text-danger" />
