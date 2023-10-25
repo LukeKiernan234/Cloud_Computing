@@ -103,7 +103,8 @@ function AddItemForm({ onNewItem }) {
                     <Button
                         type="submit"
                         variant="success"
-                        disabled={!newItem.length}
+                        //disabled={!newItem.length}
+                        disabled={true} // in order to disable the add button
                         className={submitting ? 'disabled' : ''}
                     >
                         {submitting ? 'Adding...' : 'Add Item'}
@@ -144,6 +145,7 @@ function ItemDisplay({ item, onItemUpdate, onItemRemoval }) {
                         className="toggles"
                         size="sm"
                         variant="link"
+                        disabled={true} // in order to disable the checkbox
                         onClick={toggleCompletion}
                         aria-label={
                             item.completed
